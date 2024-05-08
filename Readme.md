@@ -1,7 +1,7 @@
 # Личный проект «Девайс»
 
 * Студент: [Роман Еременко](https://up.htmlacademy.ru/htmlcss-individual/1/user/674811).
-* Наставник: `Неизвестно`.
+* Наставник: [Екатерина Комнатная](https://htmlacademy.ru/profile/id215761).
 
 ---
 
