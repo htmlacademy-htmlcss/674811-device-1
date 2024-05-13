@@ -18,13 +18,12 @@
         <div class="navigation__account">
           <form action="https://echo.htmlacademy.ru" role="search" method="get" class="navigation__account-form">
             <input type="search" name="site-search" class="navigation__account-form-input">
-            <button type="submit" class="navigation__account-form-search" aria-label="Кнопка поиска">Найти</button>
+            <button type="submit" class="navigation__account-form-search">Найти</button>
           </form>
           <a href="#" class="navigation__account-enter">Войти</a>
           <div class="navigation__account-link-wrapper">
             <a href="#" class="navigation__account-link">Сравнить</a>
-            <button type="button" class="navigation__account-button navigation__account-button--cart"
-              aria-label="Открыть корзину">Корзина</button>
+            <button type="button" class="navigation__account-button navigation__account-button--cart">Корзина</button>
             <div class="cart-modal">
               <ul class="cart-modal__product-list">
                 <li class="cart-modal__product-list-item">
@@ -53,6 +52,38 @@
           <div class="navigation__product-catalog-wrapper">
             <h2 class="navigation__title">Каталог товаров</h2>
             <button type="button" aria-label="Открыть каталог"></button>
+            <ul class="navigation__categories-list">
+              <li class="navigation__categories-item">
+                <a href="#" class="navigation__categories-link">
+                  Виртуальная реальность
+                </a>
+              </li>
+              <li class="navigation__categories-item">
+                <a href="#" class="navigation__categories-link">
+                  Моноподы для cелфи
+                </a>
+              </li>
+              <li class="navigation__categories-item">
+                <a href="#" class="navigation__categories-link">
+                  Экшн-камеры
+                </a>
+              </li>
+              <li class="navigation__categories-item">
+                <a href="#" class="navigation__categories-link">
+                  Фитнес-браслеты
+                </a>
+              </li>
+              <li class="navigation__categories-item">
+                <a href="#" class="navigation__categories-link">
+                  Умные часы
+                </a>
+              </li>
+              <li class="navigation__categories-item">
+                <a href="#" class="navigation__categories-link">
+                  Квадрокоптеры
+                </a>
+              </li>
+            </ul>
           </div>
           <ul class="navigation__product-list">
             <li class="navigation__product-list-item">
@@ -176,16 +207,13 @@
         <div class="cotainer">
           <ul class="features__list">
             <li class="features__list-item">
-              <button type="button" class="features__list-link text text--line-through"
-                aria-label="Доставка">Доставка</button>
+              <button type="button" class="features__list-link text text--line-through">Доставка</button>
             </li>
             <li class="features__list-item">
-              <button type="button" class="features__list-link text text--line-through"
-                aria-label="Гарантия">Гарантия</button>
+              <button type="button" class="features__list-link text text--line-through">Гарантия</button>
             </li>
             <li class="features__list-item">
-              <button type="button" class="features__list-link text text--line-through"
-                aria-label="Кредит">Кредит</button>
+              <button type="button" class="features__list-link text text--line-through">Кредит</button>
             </li>
           </ul>
           <ul class="features__description-list">
@@ -208,7 +236,7 @@
         </div>
       </section>
       <article class="delivery-rare">
-        <button type="button" class="delivery-rare__button" aria-label="Редкий товар">
+        <button type="button" class="delivery-rare__button">
           <span class="delivery-rare__icon-field"></span>
           <span class="delivery-rare__text">Доставим редкий товар под заказ</span>
           <span class="delivery-rare__information"></span>
@@ -258,7 +286,7 @@
         <div class="subscribe__input-wrapper">
           <form action="https://echo.htmlacademy.ru" method="post" class="subscribe__form">
             <input type="email" name="user_email" class="subscribe__input">
-            <button class="subscribe__button" type="submit" aria-label="Кнопка подписки">Подписаться</button>
+            <button class="subscribe__button" type="submit">Подписаться</button>
           </form>
           <p class="subscribe__description text"> Это бесплатно</p>
         </div>
@@ -283,17 +311,17 @@
       </ul>
       <a href="tel:+78128121212" class="page-footer__phone-number">+7 (812) 812-12-12</a>
       <div class="page-footer__wrapper">
-        <ul class="page-footer__socials-list">
-          <li class="page-footer__socials-list-item">
-            <a href="#" class="page-footer__socials-list-link">
+        <ul class="socials-list">
+          <li class="socials-list__item">
+            <a href="#" class="socials-list__link" aria-label="Ссылка Телеграм">
             </a>
           </li>
-          <li class="page-footer__socials-list-item">
-            <a href="#" class="page-footer__socials-list-link">
+          <li class="socials-list__item">
+            <a href="#" class="socials-list__link" aria-label="Ссылка Твиттер">
             </a>
           </li>
-          <li class="page-footer__socials-list-item">
-            <a href="#" class="page-footer__socials-list-link">
+          <li class="socials-list__item">
+            <a href="#" class="socials-list__link" aria-label="Ссылка Ютьюб">
             </a>
           </li>
         </ul>
