@@ -4,39 +4,40 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="styles/styles.css">
     <title>HTML Academy: Девайс</title>
   </head>
 
   <body>
 
-    <header class="page-header">
+    <header class="page-header container">
       <h1 class="visually-hidden">Магазин электронных товаров</h1>
       <nav class="navigation">
         <a href="#" class="navigation__link-logo">
-          <img src="#" alt="Логотип сайта">
+          <img src="img/logo-main.svg" width="145" height="36" alt="Логотип сайта">
         </a>
         <div class="navigation__account">
           <form action="https://echo.htmlacademy.ru" role="search" method="get" class="navigation__account-form">
-            <input type="search" name="site-search" class="navigation__account-form-input">
+            <input type="search" name="site-search" class="navigation__account-form-input" placeholder="Поиск по сайту">
             <button type="submit" class="navigation__account-form-search">Найти</button>
           </form>
           <a href="#" class="navigation__account-enter">Войти</a>
           <div class="navigation__account-link-wrapper">
             <a href="#" class="navigation__account-link">Сравнить</a>
-            <button type="button" class="navigation__account-button navigation__account-button--cart">Корзина</button>
-            <div class="cart-modal">
+            <button type="button" class="navigation__account-button-cart">Корзина</button>
+            <div class="cart-modal visually-hidden">
               <ul class="cart-modal__product-list">
                 <li class="cart-modal__product-list-item">
                   <a href="#" class="cart-modal__product-link">
                     <p class="cart-modal__product-name">Любительская селфи-палка</p>
-                    <img src="#" alt="Селфи палка">
+                    <img src="img/cart-stick-amateur.png" width="39" height="43" alt="Любительская селфи палка">
                   </a>
                   <button type="button" class="cart-modal__close-button" aria-label="Закрытие корзины"></button>
                 </li>
                 <li class="cart-modal__product-list-item">
                   <a href="#" class="cart-modal__product-link">
                     <p class="cart-modal__product-name">Профессиональная селфи-палка</p>
-                    <img src="#" alt="Профессиональная селфи палка">
+                    <img src="img/cart-stick-profi.png" width="39" height="43" alt="Профессиональная селфи палка">
                   </a>
                   <button type="button" class="cart-modal__close-button" aria-label="Убрать товар"></button>
                 </li>
@@ -45,43 +46,56 @@
                 <p class="cart-modal__price-text">Товаров: 2</p>
                 <p class="cart-modal__price-text">Сумма: 2000 ₽</p>
               </div>
+              <a href="#" class="cart-modal__open-cart-button">Открыть корзину</a>
             </div>
           </div>
         </div>
         <div class="navigation__product">
           <div class="navigation__product-catalog-wrapper">
             <h2 class="navigation__title">Каталог товаров</h2>
-            <button type="button" aria-label="Открыть каталог"></button>
+            <button type="button" class="visually-hidden" aria-label="Открыть каталог"></button>
             <ul class="navigation__categories-list">
-              <li class="navigation__categories-item">
-                <a href="#" class="navigation__categories-link">
-                  Виртуальная реальность
-                </a>
+              <li>
+                <ul class="navigation__categories-list-wrapper">
+                  <li class="navigation__categories-item">
+                    <a href="#" class="navigation__categories-link">
+                      Виртуальная реальность
+                    </a>
+                  </li>
+                  <li class="navigation__categories-item">
+                    <a href="#" class="navigation__categories-link">
+                      Моноподы для cелфи
+                    </a>
+                  </li>
+                  <li class="navigation__categories-item">
+                    <a href="#" class="navigation__categories-link">
+                      Экшн-камеры
+                    </a>
+                  </li>
+                </ul>
               </li>
-              <li class="navigation__categories-item">
-                <a href="#" class="navigation__categories-link">
-                  Моноподы для cелфи
-                </a>
+              <li>
+                <ul class="navigation__categories-list-wrapper">
+                  <li class="navigation__categories-item">
+                    <a href="#" class="navigation__categories-link">
+                      Фитнес-браслеты
+                    </a>
+                  </li>
+                  <li class="navigation__categories-item">
+                    <a href="#" class="navigation__categories-link">
+                      Умные часы
+                    </a>
+                  </li>
+                </ul>
               </li>
-              <li class="navigation__categories-item">
-                <a href="#" class="navigation__categories-link">
-                  Экшн-камеры
-                </a>
-              </li>
-              <li class="navigation__categories-item">
-                <a href="#" class="navigation__categories-link">
-                  Фитнес-браслеты
-                </a>
-              </li>
-              <li class="navigation__categories-item">
-                <a href="#" class="navigation__categories-link">
-                  Умные часы
-                </a>
-              </li>
-              <li class="navigation__categories-item">
-                <a href="#" class="navigation__categories-link">
-                  Квадрокоптеры
-                </a>
+              <li>
+                <ul class="navigation__categories-list-wrapper">
+                  <li class="navigation__categories-item">
+                    <a href="#" class="navigation__categories-link">
+                      Квадрокоптеры
+                    </a>
+                  </li>
+                </ul>
               </li>
             </ul>
           </div>
