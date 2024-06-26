@@ -68,7 +68,7 @@ img {
   background: linear-gradient(to bottom, #ffffff 20px, #ffe17f 0%);
   padding-left: 60px;
   padding-right: 60px;
-  padding-bottom: 156px;
+  padding-bottom: 35px;
 }
 
 .navigation__link-logo {
@@ -78,6 +78,10 @@ img {
 .navigation__account {
   display: flex;
   margin-bottom: 45px;
+}
+
+.navigation__account-form {
+  display: flex;
 }
 
 .navigation__account-form-input {
@@ -90,6 +94,10 @@ img {
   padding-left: 48px;
   position: relative;
   z-index: 1;
+  background-image: url(../img/icon-search.svg);
+  background-repeat: no-repeat;
+  background-position-y: 10px;
+  background-position-x: 14px;
 }
 
 .navigation__account-form-input::placeholder {
@@ -112,7 +120,8 @@ img {
 }
 
 .navigation__account-form-search {
-  padding: 7px 56px 9.8px 56px;
+  padding: 8px 10px 8px 10px;
+  min-width: 160px;
   border: solid 2px;
   font-size: 16px;
   line-height: 20px;
@@ -129,11 +138,16 @@ img {
   text-decoration: none;
   color: #000000;
   align-self: center;
-  margin-left: 53px;
+  margin-left: 26px;
+  padding-left: 27px;
+  background-image: url(../img/user.svg);
+  background-repeat: no-repeat;
+  background-position-y: 9px;
 }
 
 .navigation__account-link-wrapper {
   display: flex;
+  position: relative;
   margin-left: auto;
 }
 
@@ -144,8 +158,14 @@ img {
   text-decoration: none;
   color: #000000;
   align-self: center;
-  margin-right: 84px;
+  padding-left: 22px;
+  margin-right: 40px;
+  background-image: url(../img/stats.svg);
+  background-repeat: no-repeat;
+  background-position-y: 9px;
 }
+
+
 
 .navigation__account-button-cart {
   font-family: "Rubik", Arial;
@@ -153,8 +173,38 @@ img {
   line-height: 30px;
   color: #000000;
   border: none;
+  position: relative;
   background-color: transparent;
   padding: 0;
+  padding-left: 22px;
+  height: 30px;
+  align-self: center;
+  background-image: url(../img/cart.svg);
+  background-repeat: no-repeat;
+  background-position-y: 5px;
+}
+
+.navigation__account-button-cart::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 2px;
+  left: -16px;
+  width: 21px;
+  height: 21px;
+  background-color: #ffffff;
+  border-radius: 50%;
+}
+
+.navigation__account-button-cart::after {
+  content: "2";
+  font-family: "Rubik", Arial;
+  display: block;
+  position: absolute;
+  top: 2px;
+  left: -9px;
+  font-size: 14px;
+  line-height: 20px;
 }
 
 .navigation__title {
@@ -163,13 +213,33 @@ img {
   line-height: 20px;
   font-weight: 800;
   margin: 0;
-  margin-bottom: 19px;
   text-transform: uppercase;
   letter-spacing: 3px;
 }
 
+.navigation__button-open {
+  position: absolute;
+  bottom: -13px;
+  left: calc(100% + 25px);
+  padding: 0;
+  width: 50px;
+  height: 50px;
+  border: 2px solid rgba(0, 0, 0, 0.3);
+  border-radius: 25px;
+  background-color: transparent;
+  background-image: url(../img/categories-button.svg);
+  background-repeat: no-repeat;
+  background-position-x: 50%;
+  background-position-y: 50%;
+  z-index: 10;
+}
+
 .navigation__product {
   display: flex;
+}
+
+.navigation__product-catalog-wrapper {
+  position: relative;
 }
 
 .navigation__product-list {
@@ -198,12 +268,17 @@ img {
 }
 
 .navigation__categories-list {
-  display: grid;
+  display: none;
+  width: 1160px;
+  left: -60px;
   position: absolute;
   grid-template-columns: 252px 212px 211px;
   list-style: none;
   margin: 0;
   padding: 0;
+  padding-top: 33px;
+  padding-left: 60px;
+  background-color: #FFE17F;
 }
 
 .navigation__categories-list-wrapper {
@@ -233,7 +308,10 @@ img {
 }
 
 .cart-modal {
-  display: flex;
+  display: none;
+  position: absolute;
+  top: 40px;
+  left: 0;
   flex-direction: column;
   width: 320px;
   background-color: #000000;
