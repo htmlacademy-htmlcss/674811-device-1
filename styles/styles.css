@@ -34,6 +34,7 @@ html {
 
 body {
   margin: 0;
+  margin-top: 15px;
 }
 
 *,
@@ -64,7 +65,7 @@ img {
 .navigation {
   display: flex;
   flex-direction: column;
-  font-family: "Rubik", Arial;
+  font-family: "Rubik", "Arial", sans-serif;
   background: linear-gradient(to bottom, #ffffff 20px, #ffe17f 0%);
   padding-left: 60px;
   padding-right: 60px;
@@ -87,6 +88,7 @@ img {
 .navigation__account-form-input {
   width: 359px;
   height: 40px;
+  font-family: "Raleway", "Arial", sans-serif;
   background-color: transparent;
   border: solid 2px #000000;
   border-radius: 50px 0 0 50px;
@@ -107,7 +109,6 @@ img {
   opacity: 0.3;
 }
 
-/*Добавить картинку в бэкграунд для инпута без пвсевдоэлемента*/
 .navigation__account-form-input::before {
   content: "";
   display: block;
@@ -120,6 +121,7 @@ img {
 }
 
 .navigation__account-form-search {
+  font-family: "Raleway", "Arial", sans-serif;
   padding: 8px 10px 8px 10px;
   min-width: 160px;
   border: solid 2px;
@@ -132,7 +134,7 @@ img {
 }
 
 .navigation__account-enter {
-  font-family: "Rubik", Arial;
+  font-family: "Rubik", "Arial", sans-serif;
   font-size: 18px;
   line-height: 30px;
   text-decoration: none;
@@ -152,7 +154,7 @@ img {
 }
 
 .navigation__account-link {
-  font-family: "Rubik", Arial;
+  font-family: "Rubik", "Arial", sans-serif;
   font-size: 18px;
   line-height: 30px;
   text-decoration: none;
@@ -168,7 +170,7 @@ img {
 
 
 .navigation__account-button-cart {
-  font-family: "Rubik", Arial;
+  font-family: "Rubik", "Arial", sans-serif;
   font-size: 18px;
   line-height: 30px;
   color: #000000;
@@ -196,9 +198,8 @@ img {
   border-radius: 50%;
 }
 
-.navigation__account-button-cart::after {
-  content: "2";
-  font-family: "Rubik", Arial;
+.navigation__account-button-cart-count {
+  font-family: "Rubik", "Arial", sans-serif;
   display: block;
   position: absolute;
   top: 2px;
@@ -208,7 +209,7 @@ img {
 }
 
 .navigation__title {
-  font-family: "Raleway", Arial;
+  font-family: "Raleway", "Arial", sans-serif;
   font-size: 18px;
   line-height: 20px;
   font-weight: 800;
@@ -251,7 +252,7 @@ img {
 }
 
 .navigation__product-list-item a {
-  font-family: "Raleway", Arial;
+  font-family: "Raleway", "Arial", sans-serif;
   color: #000000;
   font-size: 18px;
   line-height: 20px;
@@ -298,7 +299,7 @@ img {
 }
 
 .navigation__categories-link {
-  font-family: "Rubik", Arial;
+  font-family: "Rubik", "Arial", sans-serif;
   width: 200px;
   color: #000000;
   font-size: 16px;
@@ -354,7 +355,7 @@ img {
   display: flex;
   font-size: 16px;
   line-height: 20px;
-  font-family: "Rubik", Arial;
+  font-family: "Rubik", "Arial", sans-serif;
   text-decoration: none;
   color: #ffffff;
 }
@@ -410,7 +411,7 @@ img {
 
 .cart-modal__open-cart-button {
   display: block;
-  font-family: "Raleway", Arial;
+  font-family: "Raleway", "Arial", sans-serif;
   font-size: 18px;
   font-weight: 800;
   line-height: 21px;
