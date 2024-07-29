@@ -34,14 +34,14 @@
                     <p class="cart-modal__product-name">Любительская селфи-палка</p>
                     <img src="img/cart-stick-amateur.png" width="39" height="43" alt="Любительская селфи палка">
                   </a>
-                  <button type="button" class="cart-modal__close-button" aria-label="Закрытие корзины"></button>
+                  <button type="button" class="close-button" aria-label="Закрытие корзины"></button>
                 </li>
                 <li class="cart-modal__product-list-item">
                   <a href="#" class="cart-modal__product-link">
                     <p class="cart-modal__product-name">Профессиональная селфи-палка</p>
                     <img src="img/cart-stick-profi.png" width="39" height="43" alt="Профессиональная селфи палка">
                   </a>
-                  <button type="button" class="cart-modal__close-button" aria-label="Убрать товар"></button>
+                  <button type="button" class="close-button" aria-label="Убрать товар"></button>
                 </li>
               </ul>
               <div class="cart-modal__price-wrapper">
@@ -144,32 +144,39 @@
               </div>
             </div>
           </li>
-          <li class="slider__list-item">
-            <h3 class="slider__item-title">02</h3>
-            <img src="./img/slider-fitness-bracer.png" width="560" height="560" alt="Фитнес-браслет">
-            <p class="slider__item-slogan">Худеем правильно!</p>
-            <p class="slider__item-description">Мотивирующие фитнес-браслеты помогут найти в себе силы не пропускать
-              занятия и соблюдать диету.</p>
-            <div class="slider__about">
-              <a href="#" class="button-line">Подробнее</a>
-              <div class="slider__about-wrapper">
-                <p class="slider__about-description">Без подзарядки<b class="slider__about-meaning">48 часов</b></p>
+          <li class="slider__list-item slider__list-item--activ">
+            <h3 class="slider__item-title slider__item-title--bracer">02</h3>
+            <img src="./img/slider-fitness-bracer.png" width="560" class="slider__item-img" height="560"
+              alt="Фитнес-браслет">
+            <div class="slider__item-text-wrapper">
+              <p class="slider__item-slogan slider__item-slogan--bracer">Худеем правильно!</p>
+              <p class="slider__item-description">Мотивирующие фитнес-браслеты помогут найти в себе силы не пропускать
+                занятия и соблюдать диету.</p>
+              <div class="slider__about">
+                <a href="#" class="button-line button-line--slider">Подробнее</a>
+                <div class="slider__about-wrapper">
+                  <p class="slider__about-description">Без подзарядки<b class="slider__about-meaning">48 часов</b></p>
+                </div>
               </div>
             </div>
           </li>
-          <li class="slider__list-item">
+          <li class="slider__list-item slider__list-item--activ">
             <h3 class="slider__item-title">03</h3>
-            <img src="./img/slider-selfie-stick.png" width="560" height="560" alt="Самая длиная селфи палка">
-            <p class="slider__item-slogan">Делай селфи, как Бен Стиллер!</p>
-            <p class="slider__item-description">Самая длинная палка для селфи доступна в нашем магазине. Восемь (Восемь,
-              Карл!) метров длиной и весом всего 5 кг.</p>
-            <div class="slider__about">
-              <a href="#" class="button-line">Подробнее</a>
-              <div class="slider__about-wrapper">
-                <p class="slider__about-description">Длина палки<b class="slider__about-meaning">8,5
-                    м</b></p>
-                <p class="slider__about-description">Вес палки<b class="slider__about-meaning">5 кг</b></p>
-                <p class="slider__about-description">Материал<b class="slider__about-meaning">Карбон</b></p>
+            <img src="./img/slider-selfie-stick.png" class="slider__item-img" width="560" height="560"
+              alt="Самая длиная селфи палка">
+            <div class="slider__item-text-wrapper">
+              <p class="slider__item-slogan slider__item-slogan--stick">Делай селфи, как&nbsp;Бен Стиллер!</p>
+              <p class="slider__item-description">Самая длинная палка для селфи доступна в нашем магазине. Восемь
+                (Восемь,
+                Карл!) метров длиной и весом всего 5 кг.</p>
+              <div class="slider__about">
+                <a href="#" class="button-line button-line--slider">Подробнее</a>
+                <div class="slider__about-wrapper slider__about-wrapper--stick">
+                  <p class="slider__about-description">Длина палки<b class="slider__about-meaning">8,5
+                      м</b></p>
+                  <p class="slider__about-description">Вес палки<b class="slider__about-meaning">5 кг</b></p>
+                  <p class="slider__about-description">Материал<b class="slider__about-meaning">Карбон</b></p>
+                </div>
               </div>
             </div>
           </li>
@@ -269,7 +276,8 @@
           <p class="text text--information">Огромный выбор гаджетов не оставит равнодушным гика, который есть в каждом
             из нас.
           </p>
-          <p class="text text--information">Мы можем доставить ваш товар в самые отдалённые уголки России транспортными
+          <p class="text text--information">Мы можем доставить ваш товар в самые отдалённые уголки России
+            транспортными
             компаниями:</p>
           <ul class="about__company-list">
             <li class="about__company-list-item">
@@ -286,7 +294,8 @@
         </div>
         <div class="contacts">
           <h3 class="title title--information">Контакты</h3>
-          <p class="text text--contacts">Вы можете забрать товар сами, заехав в наш офис. <br> Заодно сможете проверить
+          <p class="text text--contacts">Вы можете забрать товар сами, заехав в наш офис. <br> Заодно сможете
+            проверить
             работоспособность покупки.</p>
           <span class="title title--information-middle">Интернет-магазин «Девайс»</span>
           <p class="text text--contacts">Санкт-Петербург, набережная реки Карповки, 5, литера П.
@@ -304,7 +313,8 @@
           <h2 class="visually-hidden">Подписка на рассылку</h2>
           <div class="subscribe__text-wrapper">
             <span class="title title--subscribe">Подпишитесь на рассылку</span>
-            <p class="subscribe__description text">Еженедельный дайджест с обзорами новинок, длительными тест-драйвами,
+            <p class="subscribe__description text">Еженедельный дайджест с обзорами новинок, длительными
+              тест-драйвами,
               распаковками, а также акции, спецпредложения и вот это вот всё.</p>
           </div>
           <div class="subscribe__input-wrapper">
@@ -361,6 +371,37 @@
         </div>
       </div>
     </footer>
+    <div class="rare-modal">
+      <div class="rare-modal__container">
+        <form action="https://echo.htmlacademy.ru" method="post" class="rare-modal__form">
+          <fieldset class="rare-modal__fieldset">
+            <legend class="rare-modal__title">Доставка под заказ</legend>
+            <label class="rare-modal__label rare-modal__label--name">
+              Ваше имя:
+              <input type="text" class="rare-modal__input" placeholder="Введите имя">
+              <span class="rare-modal__input-hint">Добавьте имя</span>
+            </label>
+            <label class="rare-modal__label rare-modal__label--mail">
+              Ваш e-mail:
+              <input type="email" class="rare-modal__input" placeholder="Введите e-mail">
+              <span class="rare-modal__input-hint rare-modal__input-hint--mail">Забавный у вас адрес</span>
+            </label>
+            <label class="rare-modal__label rare-modal__label--product">
+              Что нужно привезти:
+              <input type="text" class="rare-modal__input" placeholder="В свободной форме">
+            </label>
+            <div class="rare-modal__count-wrapper">
+              <label class="rare-modal__label rare-modal__label--count" for="count">Количество:</label>
+              <button type="button" class="rare-modal__button-count rare-modal__button-count--minus"></button>
+              <input type="number" id="count" class="rare-modal__input rare-modal__input--count">
+              <button type="button" class="rare-modal__button-count rare-modal__button-count--plus"></button>
+            </div>
+          </fieldset>
+          <button type="submit" class="button-line button-line--modal">Отправить</button>
+        </form>
+        <button type="button" class="rare-modal__button-close" aria-label="Закрытие корзины"></button>
+      </div>
+    </div>
   </body>
 
 </html>
