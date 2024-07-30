@@ -378,12 +378,13 @@
             <legend class="rare-modal__title">Доставка под заказ</legend>
             <label class="rare-modal__label rare-modal__label--name">
               Ваше имя:
-              <input type="text" class="rare-modal__input" placeholder="Введите имя">
+              <input type="text" class="rare-modal__input rare-modal__input--name" placeholder="Введите имя">
               <span class="rare-modal__input-hint">Добавьте имя</span>
             </label>
             <label class="rare-modal__label rare-modal__label--mail">
               Ваш e-mail:
-              <input type="email" class="rare-modal__input" placeholder="Введите e-mail">
+              <input type="email" class="rare-modal__input rare-modal__input--mail rare-modal__input--invalid"
+                placeholder="Введите e-mail" value="почта">
               <span class="rare-modal__input-hint rare-modal__input-hint--mail">Забавный у вас адрес</span>
             </label>
             <label class="rare-modal__label rare-modal__label--product">
@@ -392,9 +393,16 @@
             </label>
             <div class="rare-modal__count-wrapper">
               <label class="rare-modal__label rare-modal__label--count" for="count">Количество:</label>
-              <button type="button" class="rare-modal__button-count rare-modal__button-count--minus"></button>
-              <input type="number" id="count" class="rare-modal__input rare-modal__input--count">
-              <button type="button" class="rare-modal__button-count rare-modal__button-count--plus"></button>
+              <span class="rare-modal__tooltip">
+                <button class="rare-modal__tooltip-button"></button>
+                <span class="rare-modal__tooltip-text">Постараемся найти, сколько нужно. Привезём сколько получится по
+                  требованиям к&nbsp;провозу багажа.</span>
+              </span>
+              <button type="button" class="rare-modal__button-count rare-modal__button-count--minus"
+                aria-label="Уменьшение количества"></button>
+              <input type="number" id="count" class="rare-modal__input rare-modal__input--count" value="1">
+              <button type="button" class="rare-modal__button-count rare-modal__button-count--plus"
+                aria-label="Увеличение количества"></button>
             </div>
           </fieldset>
           <button type="submit" class="button-line button-line--modal">Отправить</button>
