@@ -12,7 +12,7 @@
     <header class="page-header page-header--catalog container">
       <h1 class="visually-hidden">Магазин электронных товаров</h1>
       <nav class="navigation">
-        <a href="#" class="navigation__link-logo">
+        <a href="./index.html" class="navigation__link-logo">
           <img src="img/logo-main.svg" width="145" height="36" alt="Логотип сайта">
         </a>
         <div class="navigation__account">
@@ -21,7 +21,10 @@
               required>
             <button type="submit" class="navigation__account-form-search">Найти</button>
           </form>
-          <a href="#" class="navigation__account-enter">Войти</a>
+          <div class="navigation__account-login-wrapper">
+            <a href="#" class="navigation__account-enter">Коля Петухов</a>
+            <a href="#" class="navigation__account-enter navigation__account-enter--logout">Выйти</a>
+          </div>
           <div class="navigation__account-link-wrapper">
             <a href="#" class="navigation__account-link">Сравнить</a>
             <button type="button" class="navigation__account-button-cart"><span
@@ -251,34 +254,46 @@
               <div class="shop-items__cards-wrapper">
                 <ul class="shop-items__list">
                   <li class="shop-items__card">
-                    <p class="shop-items__card-wrapper"><span class="shop-items__card-title">Любительская <br>
-                        селфи-палка</span><span class="shop-items__card-price">500
-                        ₽</span></p>
-                    <img src="./img/selfie-stick-beginner.png" width="360" height="380" class="shop-items__card-img"
-                      alt="Любительская селфи-палка">
+                    <a href="#" class="shop-items__card-link-wrapper">
+                      <p class="shop-items__text-wrapper"><span class="shop-items__card-title">Любительская <br>
+                          селфи-палка</span><span class="shop-items__card-price">500
+                          ₽</span></p>
+                      <img src="./img/selfie-stick-beginner.png" width="360" height="380" class="shop-items__card-img"
+                        alt="Любительская селфи-палка">
+                      <span class="button-line button-line--product-card">Подробнее</span>
+                    </a>
+                  </li>
+                  <li class="shop-items__card shop-items__card--new">
+                    <a href="#" class="shop-items__card-link-wrapper">
+                      <p class="shop-items__text-wrapper"><span class="shop-items__card-title">Профессиональная
+                          селфи-&nbsp;палка</span><span class="shop-items__card-price">1
+                          500
+                          ₽</span></p>
+                      <img src="./img/selfie-stick-profi.png" class="shop-items__card-img" width="360" height="380"
+                        alt="Профессиональная селфи-палка">
+                      <span class="button-line button-line--product-card">Подробнее</span>
+                    </a>
                   </li>
                   <li class="shop-items__card">
-                    <p class="shop-items__card-wrapper"><span class="shop-items__card-title">Профессиональная
-                        селфи-&nbsp;палка</span><span class="shop-items__card-price">1
-                        500
-                        ₽</span></p>
-                    <img src="./img/selfie-stick-profi.png" class="shop-items__card-img" width="360" height="380"
-                      alt="Профессиональная селфи-палка">
-                  </li>
-                  <li class="shop-items__card">
-                    <p class="shop-items__card-wrapper"><span class="shop-items__card-title">Непотопляемая
+                    <a href="#" class="shop-items__card-link-wrapper">
+                      <p class="shop-items__text-wrapper"><span class="shop-items__card-title">Непотопляемая
                         селфи-&nbsp;палка</span><span class="shop-items__card-price">2 500
                         ₽</span></p>
                     <img src="./img/selfie-stick-unsinkable.png" class="shop-items__card-img" width="360" height="380"
                       alt="Непотопляемая селфи-палка">
+                    <span class="button-line button-line--product-card">Подробнее</span>
+                    </a>
                   </li>
                   <li class="shop-items__card">
-                    <p class="shop-items__card-wrapper"><span class="shop-items__card-title">Селфи-палка «Следуй за
+                    <a href="#" class="shop-items__card-link-wrapper">
+                      <p class="shop-items__text-wrapper"><span class="shop-items__card-title">Селфи-палка «Следуй за
                         мной»</span><span class="shop-items__card-price">1
                         500
                         ₽</span></p>
                     <img src="./img/selfie-stick-with-me.png" class="shop-items__card-img" width="360" height="380"
                       alt="Селфи-палка «Следуй за мной»">
+                    <span class="button-line button-line--product-card">Подробнее</span>
+                    </a>
                   </li>
                 </ul>
                 <button type="button" class="shop-items__button-load" aria-label="Загрузить еще карточки">Загрузить
