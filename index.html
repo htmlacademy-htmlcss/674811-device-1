@@ -5,6 +5,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="styles/styles.css">
+    <link rel="icon" href="favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
     <title>HTML Academy: Девайс</title>
   </head>
 
@@ -66,7 +68,7 @@
               <button type="button" class="navigation__button-open navigation__button-open--ope-list"
                 aria-label="Открыть каталог"></button>
             </h2>
-            <ul class="navigation__categories-list navigation__categories-list--ope">
+            <ul class="navigation__categories-list navigation__categories-list--close">
               <li>
                 <ul class="navigation__categories-list-wrapper">
                   <li class="navigation__categories-item">
@@ -75,7 +77,7 @@
                     </a>
                   </li>
                   <li class="navigation__categories-item">
-                    <a href="./catalog.html" class="navigation__categories-link navigation__categories-link--active">
+                    <a href="catalog.html" class="navigation__categories-link navigation__categories-link--activ">
                       Моноподы для cелфи
                     </a>
                   </li>
@@ -206,32 +208,32 @@
         <h2 class="visually-hidden">Каталог</h2>
         <ul class="main-catalog__list">
           <li class="main-catalog__list-item main-catalog__list-item--virtual-reality">
-            <a class="main-catalog__list-link">
+            <a href="#" class="main-catalog__list-link">
               <p class="main-catalog__text">Виртуальная реальность</p>
             </a>
           </li>
           <li class="main-catalog__list-item main-catalog__list-item--mono-selfie">
-            <a class="main-catalog__list-link">
+            <a href="catalog.html" class="main-catalog__list-link">
               <p class="main-catalog__text">Моноподы для&nbsp;селфи</p>
             </a>
           </li>
           <li class="main-catalog__list-item main-catalog__list-item--action-cam">
-            <a class="main-catalog__list-link">
+            <a href="#" class="main-catalog__list-link">
               <p class="main-catalog__text">Экшн-камеры</p>
             </a>
           </li>
           <li class="main-catalog__list-item main-catalog__list-item--fitness-brace">
-            <a class="main-catalog__list-link">
+            <a href="#" class="main-catalog__list-link">
               <p class="main-catalog__text">Фитнес-браслеты</p>
             </a>
           </li>
           <li class="main-catalog__list-item main-catalog__list-item--smart-watches">
-            <a class="main-catalog__list-link">
+            <a href="#" class="main-catalog__list-link">
               <p class="main-catalog__text">Умные часы</p>
             </a>
           </li>
           <li class="main-catalog__list-item main-catalog__list-item--quadracopter">
-            <a class="main-catalog__list-link">
+            <a href="#" class="main-catalog__list-link">
               <p class="main-catalog__text">Квадрокоптеры</p>
             </a>
           </li>
@@ -241,10 +243,10 @@
         <h2 class="visually-hidden">Услуги</h2>
         <div class="features__wrapper container">
           <ul class="features-list">
-            <li class="features__list-item">
+            <li class="features__list-item features__list-item--active">
               <button type="button" class="features__list-link button-line button-line--features">Доставка</button>
             </li>
-            <li class="features__list-item features__list-item--active">
+            <li class="features__list-item">
               <button type="button" class="features__list-link button-line button-line--features">Гарантия</button>
             </li>
             <li class="features__list-item">
@@ -327,6 +329,7 @@
           </div>
           <div class="subscribe__input-wrapper">
             <form action="https://echo.htmlacademy.ru" method="post" class="subscribe__form">
+              <!--Для отображения ошибки добавить класс".subscribe__input--invalid" инпуту-->
               <input type="email" name="user_email" class="subscribe__input" placeholder="Ваш e-mail">
               <button class="subscribe__button" type="submit"><span
                   class="subscribe__button-text">Подписаться</span></button>
