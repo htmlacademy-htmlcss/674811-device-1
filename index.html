@@ -5,6 +5,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="styles/styles.css">
+    <link rel="icon" href="favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
     <title>HTML Academy: Девайс</title>
   </head>
 
@@ -18,9 +20,12 @@
         </a>
         <div class="navigation__account">
           <form action="https://echo.htmlacademy.ru" role="search" method="get" class="navigation__account-form">
-            <input type="search" name="site-search" class="navigation__account-form-input" placeholder="Поиск по сайту"
-              required>
-            <button type="submit" class="navigation__account-form-search">Найти</button>
+            <span class="navigation__outline-wrapper">
+              <input type="search" name="site-search" class="navigation__account-form-input"
+                placeholder="Поиск по сайту" required>
+            </span>
+            <button type="submit" class="navigation__account-form-search"><span
+                class="navigation__account-form-search-text">Найти</span></button>
           </form>
           <a href="#" class="navigation__account-enter">Войти</a>
           <div class="navigation__account-link-wrapper">
@@ -34,30 +39,36 @@
                     <p class="cart-modal__product-name">Любительская селфи-палка</p>
                     <img src="img/cart-stick-amateur.png" width="39" height="43" alt="Любительская селфи палка">
                   </a>
-                  <button type="button" class="close-button" aria-label="Закрытие корзины"></button>
+                  <button type="button" class="close-button" aria-label="Убрать товар">
+                    <span class="close-button__outline"></span>
+                  </button>
                 </li>
                 <li class="cart-modal__product-list-item">
                   <a href="#" class="cart-modal__product-link">
                     <p class="cart-modal__product-name">Профессиональная селфи-палка</p>
                     <img src="img/cart-stick-profi.png" width="39" height="43" alt="Профессиональная селфи палка">
                   </a>
-                  <button type="button" class="close-button" aria-label="Убрать товар"></button>
+                  <button type="button" class="close-button" aria-label="Убрать товар">
+                    <span class="close-button__outline"></span>
+                  </button>
                 </li>
               </ul>
               <div class="cart-modal__price-wrapper">
                 <p class="cart-modal__price-text">Товаров: 2</p>
                 <p class="cart-modal__price-text">Сумма: 2000 ₽</p>
               </div>
-              <a href="#" class="cart-modal__open-cart-button">Открыть корзину</a>
+              <a href="#" class="cart-modal__open-cart-button"><span class="cart-modal__open-cart-button-text">Открыть
+                  корзину</span></a>
             </div>
           </div>
         </div>
         <div class="navigation__product">
           <div class="navigation__product-catalog-wrapper">
-            <!--Прописать состояние по ховеру-->
-            <h2 class="navigation__title">Каталог товаров <button type="button" class="navigation__button-open"
-                aria-label="Открыть каталог"></button></h2>
-            <ul class="navigation__categories-list">
+            <h2 class="navigation__title">Каталог товаров
+              <button type="button" class="navigation__button-open navigation__button-open--ope-list"
+                aria-label="Открыть каталог"></button>
+            </h2>
+            <ul class="navigation__categories-list navigation__categories-list--close">
               <li>
                 <ul class="navigation__categories-list-wrapper">
                   <li class="navigation__categories-item">
@@ -66,7 +77,7 @@
                     </a>
                   </li>
                   <li class="navigation__categories-item">
-                    <a href="#" class="navigation__categories-link">
+                    <a href="catalog.html" class="navigation__categories-link navigation__categories-link--activ">
                       Моноподы для cелфи
                     </a>
                   </li>
@@ -104,13 +115,13 @@
           </div>
           <ul class="navigation__product-list">
             <li class="navigation__product-list-item">
-              <a href="#">Доставка</a>
+              <a href="#" class="navigation__product-list-link">Доставка</a>
             </li>
             <li class="navigation__product-list-item">
-              <a href="#">Гарантия</a>
+              <a href="#" class="navigation__product-list-link navigation__product-list-link--activ">Гарантия</a>
             </li>
             <li class="navigation__product-list-item">
-              <a href="#">Контакты</a>
+              <a href="#" class="navigation__product-list-link">Контакты</a>
             </li>
           </ul>
         </div>
@@ -120,10 +131,6 @@
     <main class="page-main">
       <section class="slider container">
         <h2 class="visually-hidden">Лучшие модели</h2>
-        <div class="slider__button-wrapper">
-          <button type="button" class="slider__button-forward" aria-label="Слайд назад"></button>
-          <button type="button" class="slider__button-next" aria-label="Слайд вперёд"></button>
-        </div>
         <ul class="slider__list">
           <li class="slider__list-item slider__list-item--active">
             <h3 class="slider__item-title">01</h3>
@@ -181,49 +188,52 @@
             </div>
           </li>
         </ul>
-        <!--Кнопки button-->
-        <ul class="slider__select-wrapper">
-          <li class="slider__select-list">
-            <button type="button" class="slider__select-button" aria-label="Перый слайд"></button>
+        <div class="slider__arrow-button-wrapper">
+          <button class="slider__arrow-button" aria-label="Переключение слайда назад"></button>
+          <button class="slider__arrow-button slider__arrow-button--right" aria-label="Переключение слайда вперёд"></button>
+        </div>
+        <ol class="slider__select-wrapper">
+          <li class="slider__select-item slider__select-item--current">
+            <button type="button" class="visually-hidden" aria-label="Перый слайд"></button>
           </li>
-          <li class="slider__select-list">
-            <button type="button" class="slider__select-button" aria-label="Второй слайд"></button>
+          <li class="slider__select-item">
+            <button type="button" class="visually-hidden" aria-label="Второй слайд"></button>
           </li>
-          <li class="slider__select-list">
-            <button type="button" class="slider__select-button" aria-label="Третий слайд"></button>
+          <li class="slider__select-item">
+            <button type="button" class="visually-hidden" aria-label="Третий слайд"></button>
           </li>
-        </ul>
+        </ol>
       </section>
       <article class="main-catalog container">
         <h2 class="visually-hidden">Каталог</h2>
         <ul class="main-catalog__list">
           <li class="main-catalog__list-item main-catalog__list-item--virtual-reality">
-            <a class="main-catalog__list-link">
+            <a href="#" class="main-catalog__list-link">
               <p class="main-catalog__text">Виртуальная реальность</p>
             </a>
           </li>
           <li class="main-catalog__list-item main-catalog__list-item--mono-selfie">
-            <a class="main-catalog__list-link">
+            <a href="catalog.html" class="main-catalog__list-link">
               <p class="main-catalog__text">Моноподы для&nbsp;селфи</p>
             </a>
           </li>
           <li class="main-catalog__list-item main-catalog__list-item--action-cam">
-            <a class="main-catalog__list-link">
+            <a href="#" class="main-catalog__list-link">
               <p class="main-catalog__text">Экшн-камеры</p>
             </a>
           </li>
           <li class="main-catalog__list-item main-catalog__list-item--fitness-brace">
-            <a class="main-catalog__list-link">
+            <a href="#" class="main-catalog__list-link">
               <p class="main-catalog__text">Фитнес-браслеты</p>
             </a>
           </li>
           <li class="main-catalog__list-item main-catalog__list-item--smart-watches">
-            <a class="main-catalog__list-link">
+            <a href="#" class="main-catalog__list-link">
               <p class="main-catalog__text">Умные часы</p>
             </a>
           </li>
           <li class="main-catalog__list-item main-catalog__list-item--quadracopter">
-            <a class="main-catalog__list-link">
+            <a href="#" class="main-catalog__list-link">
               <p class="main-catalog__text">Квадрокоптеры</p>
             </a>
           </li>
@@ -319,8 +329,10 @@
           </div>
           <div class="subscribe__input-wrapper">
             <form action="https://echo.htmlacademy.ru" method="post" class="subscribe__form">
+              <!--Для отображения ошибки добавить класс".subscribe__input--invalid" инпуту-->
               <input type="email" name="user_email" class="subscribe__input" placeholder="Ваш e-mail">
-              <button class="subscribe__button" type="submit">Подписаться</button>
+              <button class="subscribe__button" type="submit"><span
+                  class="subscribe__button-text">Подписаться</span></button>
             </form>
             <p class="subscribe__description subscribe__description--form text"> Это бесплатно</p>
           </div>
@@ -351,14 +363,17 @@
           <ul class="socials-list">
             <li class="socials-list__item">
               <a href="#" class="socials-list__link socials-list__link--telegram" aria-label="Ссылка Телеграм">
+                <span class="socials-list__link-img socials-list__link-img--telegram"></span>
               </a>
             </li>
             <li class="socials-list__item">
               <a href="#" class="socials-list__link socials-list__link--youtube" aria-label="Ссылка Ютьюб">
+                <span class="socials-list__link-img socials-list__link-img--youtube"></span>
               </a>
             </li>
             <li class="socials-list__item">
               <a href="#" class="socials-list__link socials-list__link--twitter" aria-label="Ссылка Твиттер">
+                <span class="socials-list__link-img socials-list__link-img--twitter"></span>
               </a>
             </li>
           </ul>
@@ -366,30 +381,70 @@
         <div class="page-footer__wrapper-right">
           <a href="tel:+78128121212" class="page-footer__phone-number">Тел.: +7 (812) 812-12-12</a>
           <a href="#" class="page-footer__academy-link">
-            <img src="img/academy-logo.svg" width="115" height="33" alt="Лого академии">
+            <svg width="115" height="33" viewBox="0 0 115 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M0 12.9V15.5H2.5V12.9H0Z" fill="#FFC700" />
+              <path
+                d="M11.6 4.5C10 4.5 8.8 5.2 8 6.2H7.9V0H5.9V15.5H7.9V10.2C7.9 8.1 9.2 6.6 11.2 6.6C13 6.6 14.1 8 14.1 9.8V15.5H16.1V9.4C16.2 6.4 14.3 4.5 11.6 4.5Z"
+                fill="#FFC700" />
+              <path
+                d="M26.6 4.8H21.8V1.1H19.8V4.9H17.9V6.9H19.8V12.9C19.8 14.6 20.8 15.6 22.5 15.6H26.6V13.6H22.9C22.2 13.6 21.8 13.2 21.8 12.5V6.8H26.6V4.8Z"
+                fill="#FFC700" />
+              <path
+                d="M41.1 4.6C39.5 4.6 38.2 5.4 37.6 6.7H37.5C36.9 5.5 35.7 4.6 34.1 4.6C32.7 4.6 31.6 5.4 31 6.4H30.9V4.8H29V15.4H31V10C31 8 32 6.5 33.6 6.5C35.1 6.5 36 7.5 36 9.1V15.4H38V9.8C38 7.4 39.4 6.5 40.6 6.5C42.1 6.5 43 7.5 43 9.1V15.4H45V8.9C45.1 6.4 43.6 4.6 41.1 4.6Z"
+                fill="#FFC700" />
+              <path d="M47.8 12.7C47.8 14.4 48.8 15.4 50.6 15.4H52.6V13.4H50.9C50.2 13.4 49.8 13 49.8 12.3V0H47.8V12.7Z"
+                fill="#FFC700" />
+              <path
+                d="M28.9 19.7C28 18.6 26.7 17.9 25 17.9C21.9 17.9 19.6 20.2 19.6 23.5C19.6 26.8 21.9 29.1 25 29.1C26.8 29.1 28 28.3 28.8 27.2H28.9V28.8H30.9V18.2H28.9V19.7ZM25.3 27.1C23.1 27.1 21.7 25.5 21.7 23.5C21.7 21.5 23.1 19.9 25.3 19.9C27.5 19.9 28.9 21.5 28.9 23.5C28.9 25.4 27.5 27.1 25.3 27.1Z"
+                fill="#FFC700" />
+              <path
+                d="M44.2 22C43.7 19.6 41.6 17.9 38.8 17.9C35.4 17.9 33.2 20.4 33.2 23.5C33.2 26.6 35.4 29.1 38.8 29.1C41.6 29.1 43.7 27.3 44.2 24.9H42.1C41.7 26.2 40.4 27.2 38.8 27.2C36.6 27.2 35.2 25.6 35.2 23.6C35.2 21.6 36.6 20 38.8 20C40.4 20 41.6 21 42.1 22.2H44.2V22Z"
+                fill="#FFC700" />
+              <path
+                d="M55.1 19.7C54.2 18.6 52.9 17.9 51.2 17.9C48.1 17.9 45.8 20.2 45.8 23.5C45.8 26.8 48.1 29.1 51.2 29.1C53 29.1 54.2 28.3 55 27.2H55.1V28.8H57.1V18.2H55.1V19.7ZM51.5 27.1C49.3 27.1 47.9 25.5 47.9 23.5C47.9 21.5 49.3 19.9 51.5 19.9C53.7 19.9 55.1 21.5 55.1 23.5C55.1 25.4 53.6 27.1 51.5 27.1Z"
+                fill="#FFC700" />
+              <path
+                d="M68.7 19.8C67.8 18.7 66.5 17.9 64.8 17.9C61.7 17.9 59.4 20.2 59.4 23.5C59.4 26.8 61.6 29.1 64.8 29.1C66.5 29.1 67.8 28.3 68.6 27.3H68.7V28.8H70.7V13.4H68.7V19.8ZM65.1 27.1C62.9 27.1 61.5 25.5 61.5 23.5C61.5 21.5 62.9 19.9 65.1 19.9C67.3 19.9 68.7 21.5 68.7 23.5C68.6 25.5 67.2 27.1 65.1 27.1Z"
+                fill="#FFC700" />
+              <path
+                d="M78.3 17.9C75 17.9 72.8 20.4 72.8 23.5C72.8 26.5 74.9 29.1 78.3 29.1C80.8 29.1 82.8 27.8 83.5 25.5H81.4C80.9 26.5 79.8 27.1 78.4 27.1C76.5 27.1 75.1 25.8 75 24.2H83.8C84 20.6 81.8 17.9 78.3 17.9ZM78.3 19.8C80 19.8 81.3 20.8 81.6 22.4H75.1C75.4 20.9 76.6 19.8 78.3 19.8Z"
+                fill="#FFC700" />
+              <path
+                d="M98.2 17.9C96.6 17.9 95.3 18.7 94.6 19.9H94.5C93.9 18.7 92.7 17.9 91.1 17.9C89.7 17.9 88.6 18.6 88 19.7V18.2H86.1V28.8H88.1V23.4C88.1 21.4 89.1 20 90.7 19.9C92.2 19.9 93.1 20.9 93.1 22.5V28.8H95.1V23.2C95.1 20.8 96.5 19.9 97.7 19.9C99.2 19.9 100.1 20.9 100.1 22.5V28.8H102.1V22.3C102.2 19.7 100.7 17.9 98.2 17.9Z"
+                fill="#FFC700" />
+              <path
+                d="M109.4 27L105.8 18.1H103.6L108.4 29.7C108.1 30.6 107.7 30.9 106.7 30.9H104.2V32.9H106.7C108.5 32.9 109.5 32.1 110.2 30.3L114.9 18.1H112.8L109.4 27Z"
+                fill="#FFC700" />
+            </svg>
           </a>
         </div>
       </div>
     </footer>
-    <div class="rare-modal">
+    <div class="rare-modal rare-modal--close">
       <div class="rare-modal__container">
         <form action="https://echo.htmlacademy.ru" method="post" class="rare-modal__form">
           <fieldset class="rare-modal__fieldset">
             <legend class="rare-modal__title">Доставка под заказ</legend>
             <label class="rare-modal__label rare-modal__label--name">
               Ваше имя:
-              <input type="text" class="rare-modal__input rare-modal__input--name" placeholder="Введите имя">
+              <span class="rare-modal__input-outline">
+                <input type="text" class="rare-modal__input rare-modal__input--name" placeholder="Введите имя">
+              </span>
               <span class="rare-modal__input-hint">Добавьте имя</span>
             </label>
             <label class="rare-modal__label rare-modal__label--mail">
               Ваш e-mail:
-              <input type="email" class="rare-modal__input rare-modal__input--mail rare-modal__input--invalid"
-                placeholder="Введите e-mail" value="почта">
+              <span class="rare-modal__input-outline">
+                <input type="email" class="rare-modal__input rare-modal__input--mail rare-modal__input--invalid"
+                  placeholder="Введите e-mail" value="почта">
+              </span>
               <span class="rare-modal__input-hint rare-modal__input-hint--mail">Забавный у вас адрес</span>
             </label>
             <label class="rare-modal__label rare-modal__label--product">
               Что нужно привезти:
-              <input type="text" class="rare-modal__input" placeholder="В свободной форме">
+              <span class="rare-modal__input-outline">
+                <input type="text" class="rare-modal__input" placeholder="В свободной форме">
+              </span>
             </label>
             <div class="rare-modal__count-wrapper">
               <label class="rare-modal__label rare-modal__label--count" for="count">Количество:</label>
@@ -398,11 +453,14 @@
                 <span class="rare-modal__tooltip-text">Постараемся найти, сколько нужно. Привезём сколько получится по
                   требованиям к&nbsp;провозу багажа.</span>
               </span>
-              <button type="button" class="rare-modal__button-count rare-modal__button-count--minus"
-                aria-label="Уменьшение количества"></button>
-              <input type="number" id="count" class="rare-modal__input rare-modal__input--count" value="1">
-              <button type="button" class="rare-modal__button-count rare-modal__button-count--plus"
-                aria-label="Увеличение количества"></button>
+              <div class="rare-modal__count-buttons-wrapper">
+                <button type="button" class="rare-modal__button-count rare-modal__button-count--minus"
+                  aria-label="Уменьшение количества"></button>
+                <input type="number" id="count" class="rare-modal__input rare-modal__input--count" value="1">
+                <button type="button" class="rare-modal__button-count rare-modal__button-count--plus"
+                  aria-label="Увеличение количества"></button>
+              </div>
+
             </div>
           </fieldset>
           <button type="submit" class="button-line button-line--modal">Отправить</button>
