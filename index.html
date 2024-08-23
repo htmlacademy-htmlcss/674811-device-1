@@ -24,15 +24,15 @@
               <input type="search" name="site-search" class="navigation__account-form-input"
                 placeholder="Поиск по сайту" required>
             </span>
-            <button type="submit" class="navigation__account-form-search"><span
+            <button type="submit" class="navigation__account-form-search" aria-label="Поиск по сайту"><span
                 class="navigation__account-form-search-text">Найти</span></button>
           </form>
           <a href="#" class="navigation__account-enter">Войти</a>
           <div class="navigation__account-link-wrapper">
             <a href="#" class="navigation__account-link">Сравнить</a>
-            <button type="button" class="navigation__account-button-cart"><span
+            <button type="button" class="navigation__account-button-cart" aria-label="Открыть корзину"><span
                 class="navigation__account-button-cart-count">2</span> Корзина</button>
-            <div class="cart-modal">
+            <div class="cart-modal cart-modal--close">
               <ul class="cart-modal__product-list">
                 <li class="cart-modal__product-list-item">
                   <a href="#" class="cart-modal__product-link">
@@ -189,8 +189,8 @@
           </li>
         </ul>
         <div class="slider__arrow-button-wrapper">
-          <button class="slider__arrow-button" aria-label="Переключение слайда назад"></button>
-          <button class="slider__arrow-button slider__arrow-button--right" aria-label="Переключение слайда вперёд"></button>
+          <button type="button" class="slider__arrow-button" aria-label="Переключение слайда назад"></button>
+          <button type="button" class="slider__arrow-button slider__arrow-button--right" aria-label="Переключение слайда вперёд"></button>
         </div>
         <ol class="slider__select-wrapper">
           <li class="slider__select-item slider__select-item--current">
@@ -244,13 +244,13 @@
         <div class="features__wrapper container">
           <ul class="features-list">
             <li class="features__list-item features__list-item--active">
-              <button type="button" class="features__list-link button-line button-line--features">Доставка</button>
+              <button type="button" class="features__list-link button-line button-line--features" aria-label="Доставка товара">Доставка</button>
             </li>
             <li class="features__list-item">
-              <button type="button" class="features__list-link button-line button-line--features">Гарантия</button>
+              <button type="button" class="features__list-link button-line button-line--features" aria-label="Гарантия товара">Гарантия</button>
             </li>
             <li class="features__list-item">
-              <button type="button" class="features__list-link button-line button-line--features">Кредит</button>
+              <button type="button" class="features__list-link button-line button-line--features" aria-label="Кредитные условия">Кредит</button>
             </li>
           </ul>
           <ul class="features__description-list">
@@ -274,7 +274,7 @@
       </section>
       <article class="delivery-rare">
         <h2 class="visually-hidden">Доставка редкого заказа</h2>
-        <button type="button" class="delivery-rare__button container">
+        <button type="button" class="delivery-rare__button container" aria-label="Доставить редкий товар">
           <span class="delivery-rare__text">Доставим редкий товар под заказ</span>
           <span class="delivery-rare__information"></span>
         </button>
@@ -331,8 +331,8 @@
             <form action="https://echo.htmlacademy.ru" method="post" class="subscribe__form">
               <!--Для отображения ошибки добавить класс".subscribe__input--invalid" инпуту-->
               <input type="email" name="user_email" class="subscribe__input" placeholder="Ваш e-mail">
-              <button class="subscribe__button" type="submit"><span
-                  class="subscribe__button-text">Подписаться</span></button>
+              <button type="submit" class="subscribe__button" type="submit"><span
+                  class="subscribe__button-text" aria-label="Подписать на рассылку">Подписаться</span></button>
             </form>
             <p class="subscribe__description subscribe__description--form text"> Это бесплатно</p>
           </div>
@@ -380,7 +380,7 @@
         </div>
         <div class="page-footer__wrapper-right">
           <a href="tel:+78128121212" class="page-footer__phone-number">Тел.: +7 (812) 812-12-12</a>
-          <a href="#" class="page-footer__academy-link">
+          <a href="#" class="page-footer__academy-link" aria-label="Логотип HTML Academy">
             <svg width="115" height="33" viewBox="0 0 115 33" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M0 12.9V15.5H2.5V12.9H0Z" fill="#FFC700" />
               <path
@@ -449,7 +449,7 @@
             <div class="rare-modal__count-wrapper">
               <label class="rare-modal__label rare-modal__label--count" for="count">Количество:</label>
               <span class="rare-modal__tooltip">
-                <button class="rare-modal__tooltip-button"></button>
+                <button type="button" class="rare-modal__tooltip-button" aria-label="Информация о доставке"></button>
                 <span class="rare-modal__tooltip-text">Постараемся найти, сколько нужно. Привезём сколько получится по
                   требованиям к&nbsp;провозу багажа.</span>
               </span>
@@ -463,7 +463,7 @@
 
             </div>
           </fieldset>
-          <button type="submit" class="button-line button-line--modal">Отправить</button>
+          <button type="submit" class="button-line button-line--modal" aria-label="Отправить данные о заказе">Отправить</button>
         </form>
         <button type="button" class="rare-modal__button-close" aria-label="Закрытие корзины"></button>
       </div>

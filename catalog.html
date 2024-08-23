@@ -5,12 +5,13 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="styles/styles.css">
+    <link rel="icon" href="favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
     <title>HTML Academy: Девайс Каталог</title>
   </head>
 
   <body>
     <header class="page-header page-header--catalog container">
-      <h1 class="visually-hidden">Магазин электронных товаров</h1>
       <nav class="navigation">
         <a href="./index.html" class="navigation__link-logo">
           <img src="img/logo-main.svg" width="145" height="36" alt="Логотип сайта">
@@ -21,7 +22,7 @@
               <input type="search" name="site-search" class="navigation__account-form-input"
                 placeholder="Поиск по сайту" required>
             </span>
-            <button type="submit" class="navigation__account-form-search"><span
+            <button type="submit" class="navigation__account-form-search" aria-label="Поиск по сайту"><span
                 class="navigation__account-form-search-text">Найти</span></button>
           </form>
           <div class="navigation__account-login-wrapper">
@@ -30,9 +31,9 @@
           </div>
           <div class="navigation__account-link-wrapper">
             <a href="#" class="navigation__account-link">Сравнить</a>
-            <button type="button" class="navigation__account-button-cart"><span
+            <button type="button" class="navigation__account-button-cart" aria-label="Открыть корзину"><span
                 class="navigation__account-button-cart-count">2</span> Корзина</button>
-            <div class="cart-modal">
+            <div class="cart-modal cart-modal--close">
               <ul class="cart-modal__product-list">
                 <li class="cart-modal__product-list-item">
                   <a href="#" class="cart-modal__product-link">
@@ -129,9 +130,8 @@
     </header>
 
     <main class="catalog-main">
-      <h1 class="visually-hidden">Каталог товаров</h1>
       <header class="catalog-header container">
-        <h2 class="title title--catalog">Моноподы для селфи</h2>
+        <h1 class="title title--catalog">Моноподы для селфи</h1>
         <ul class="breadcrumbs">
           <li class="breadcrumbs__item">
             <a href="./index.html" class="breadcrumbs__link">Главная</a>
@@ -156,10 +156,10 @@
                   <div class="range">
                     <div class="range__scale">
                       <div class="range__bar">
-                        <button class="range__toggle range__toggle--min">
+                        <button type="button" class="range__toggle range__toggle--min" aria-label="Изменить минимальную цену">
                           <span class="visually-hidden">Изменить минимальную цену.</span>
                         </button>
-                        <button class="range__toggle range__toggle--max">
+                        <button type="button" class="range__toggle range__toggle--max" aria-label="Изменить максимальную цену">
                           <span class="visually-hidden">Изменить максимальную цену.</span>
                         </button>
                       </div>
@@ -223,14 +223,14 @@
                   <ul class="filters__radio-list">
                     <li class="filters__radio-item">
                       <label class="filters__label filters__label--radio">
-                        <input type="radio" name="bluetooth" class="filters__radio-input visually-hidden" checked>
+                        <input type="radio" name="bluetooth-yes" class="filters__radio-input visually-hidden" checked>
                         Есть
                         <span class="filters__radio-mark"></span>
                       </label>
                     </li>
                     <li class="filters__radio-item">
                       <label class="filters__label filters__label--radio">
-                        <input type="radio" name="bluetooth" class="filters__radio-input visually-hidden">
+                        <input type="radio" name="bluetooth-no" class="filters__radio-input visually-hidden">
                         Нет
                         <span class="filters__radio-mark"></span>
                       </label>
@@ -238,8 +238,8 @@
                   </ul>
                 </fieldset>
               </div>
+              <button type="submit" class="button-line button-line--catalog-filters" aria-label="Показать результат">Показать</button>
             </form>
-            <button type="submit" class="button-line button-line--catalog-filters">Показать</button>
           </section>
           <section class="catalog-items">
             <h2 class="visually-hidden">Подходящие товары</h2>
@@ -391,7 +391,7 @@
         </div>
         <div class="page-footer__wrapper-right">
           <a href="tel:+78128121212" class="page-footer__phone-number">Тел.: +7 (812) 812-12-12</a>
-          <a href="#" class="page-footer__academy-link">
+          <a href="#" class="page-footer__academy-link" aria-label="Логотип HTML Academy">
             <svg width="115" height="33" viewBox="0 0 115 33" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M0 12.9V15.5H2.5V12.9H0Z" fill="#FFC700" />
               <path
