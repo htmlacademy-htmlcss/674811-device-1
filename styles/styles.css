@@ -53,8 +53,8 @@ img {
   -moz-appearance: textfield;
 }
 
-input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button {
+.input__number::-webkit-outer-spin-button,
+.input__number::-webkit-inner-spin-button {
   -webkit-appearance: none;
 }
 
@@ -1073,6 +1073,7 @@ input::-webkit-inner-spin-button {
   margin: 0;
   margin-left: 40px;
   padding-top: 104px;
+  padding-bottom: 36px;
   z-index: 10;
 }
 
