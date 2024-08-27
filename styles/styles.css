@@ -33,7 +33,7 @@ html {
 }
 
 body {
-  min-width: 1500px;
+  min-width: 1200px;
   margin: 0;
   padding-top: 20px;
 }
@@ -49,12 +49,12 @@ img {
   object-fit: contain;
 }
 
-input[type="number"] {
+.input__number {
   -moz-appearance: textfield;
 }
 
-input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button {
+.input__number::-webkit-outer-spin-button,
+.input__number::-webkit-inner-spin-button {
   -webkit-appearance: none;
 }
 
@@ -558,7 +558,7 @@ input::-webkit-inner-spin-button {
 .navigation__button-open {
   position: absolute;
   bottom: -13px;
-  right: 3px;
+  right: 7px;
   padding: 0;
   width: 50px;
   height: 50px;
@@ -623,11 +623,13 @@ input::-webkit-inner-spin-button {
 
 .navigation__product-catalog-wrapper {
   position: relative;
+  min-width: 300px;
 }
 
 .navigation__product-list {
   display: flex;
   flex-wrap: wrap;
+  justify-content: flex-end;
   list-style: none;
   margin: 0;
   padding: 0;
@@ -1023,7 +1025,7 @@ input::-webkit-inner-spin-button {
 
 /*Слайдер*/
 .slider {
-  margin-bottom: 70px;
+  margin-bottom: 58px;
   position: relative;
 }
 
@@ -1071,6 +1073,7 @@ input::-webkit-inner-spin-button {
   margin: 0;
   margin-left: 40px;
   padding-top: 104px;
+  padding-bottom: 36px;
   z-index: 10;
 }
 
@@ -1137,10 +1140,8 @@ input::-webkit-inner-spin-button {
   padding: 0;
   list-style-type: none;
   display: flex;
-  position: absolute;
-  bottom: 0;
-  right: 542px;
-  z-index: 40;
+  justify-content: center;
+  transform: translateY(-12px);
 }
 
 .slider__select-item {
@@ -1500,6 +1501,18 @@ input::-webkit-inner-spin-button {
   background-position-y: 35px, 0;
 }
 
+.delivery-rare__button::before {
+  content: "";
+  display: block;
+  width: 40px;
+  height: 40px;
+  border-radius: 20px;
+  background-color: #dcdcdc;
+  position: absolute;
+  top: 30px;
+  right: 42px;
+}
+
 .delivery-rare__button::after {
   content: "";
   display: none;
@@ -1524,8 +1537,8 @@ input::-webkit-inner-spin-button {
   cursor: pointer;
 }
 
-.delivery-rare__button:hover .delivery-rare__information::before,
-.delivery-rare__button:hover .delivery-rare__information::after {
+.delivery-rare__button:hover .delivery-rare__text::before,
+.delivery-rare__button:hover .delivery-rare__text::after {
   opacity: 1;
 }
 
@@ -1533,18 +1546,7 @@ input::-webkit-inner-spin-button {
   opacity: 0.3;
 }
 
-.delivery-rare__information {
-  display: block;
-  width: 40px;
-  height: 40px;
-  border-radius: 20px;
-  background-color: #dcdcdc;
-  position: absolute;
-  top: 30px;
-  right: 42px;
-}
-
-.delivery-rare__information::before {
+.delivery-rare__text::before {
   content: "";
   display: block;
   width: 2px;
@@ -1552,11 +1554,11 @@ input::-webkit-inner-spin-button {
   background-color: #000000;
   opacity: 30%;
   position: absolute;
-  top: 14px;
-  left: calc(50% - 1px);
+  top: calc(50% - 6px);
+  left: calc(100% - 64px);
 }
 
-.delivery-rare__information::after {
+.delivery-rare__text::after {
   content: "";
   display: block;
   width: 2px;
@@ -1564,8 +1566,8 @@ input::-webkit-inner-spin-button {
   background-color: #000000;
   opacity: 30%;
   position: absolute;
-  top: 18px;
-  left: calc(50% - 1px);
+  top: calc(50% - 2px);
+  left: calc(100% - 64px);
 }
 
 /*Информация о компании*/
@@ -1762,6 +1764,7 @@ input::-webkit-inner-spin-button {
   padding-left: 38px;
   padding-right: 33px;
   position: relative;
+  background-color: #f0f0f0;
 }
 
 
@@ -1878,10 +1881,10 @@ input::-webkit-inner-spin-button {
 
 .page-footer__wrapper-center {
   display: flex;
-  align-self: flex-end;
+  align-self: flex-start;
   flex-direction: column;
   margin-bottom: 55px;
-  margin-right: 181px;
+  padding-top: 77px;
 }
 
 .page-footer__features-list {
@@ -2024,7 +2027,6 @@ input::-webkit-inner-spin-button {
 .page-footer__academy-link {
   position: relative;
   align-self: flex-end;
-  left: 3px;
 }
 
 .page-footer__academy-link:hover path {
@@ -2056,13 +2058,16 @@ input::-webkit-inner-spin-button {
 
 .page-footer__wrapper-right {
   display: flex;
-  align-self: flex-end;
+  align-self: flex-start;
   flex-direction: column;
   margin-bottom: 54px;
+  margin-left: auto;
+  padding-top: 79px;
 }
 
 .page-footer__phone-number {
   font-family: "Rubik", "Arial", sans-serif;
+  min-width: 175px;
   font-size: 16px;
   font-weight: 400;
   line-height: 20px;
@@ -2555,7 +2560,8 @@ input::-webkit-inner-spin-button {
   position: relative;
 }
 
-.sort__button-rect {
+.sort__button::before {
+  content: "";
   display: block;
   width: 30px;
   height: 30px;
@@ -2566,15 +2572,15 @@ input::-webkit-inner-spin-button {
   background-position-y: center;
 }
 
-.sort__button:hover .sort__button-rect {
+.sort__button:hover.sort__button::before {
   opacity: 0.5;
 }
 
-.sort__button:active .sort__button-rect {
+.sort__button:active.sort__button::before {
   opacity: 1;
 }
 
-.sort__button--down {
+.sort__button--down.sort__button::before {
   transform: rotate(180deg);
 }
 
@@ -2917,7 +2923,7 @@ input::-webkit-inner-spin-button {
   left: calc(50% - 460px);
   border: 10px solid #000000;
   width: 920px;
-  padding: 62px 70px;
+  padding: 61px 69px;
   background-color: #ffffff;
   color: #000000;
   box-shadow: 0 10px 0 0 rgba(0, 0, 0, 0.1);
@@ -2941,6 +2947,7 @@ input::-webkit-inner-spin-button {
   font-weight: 800;
   line-height: 50px;
   margin-bottom: 42px;
+  max-width: 700px;
 }
 
 .rare-modal__label {
@@ -2953,6 +2960,7 @@ input::-webkit-inner-spin-button {
   line-height: 20px;
   letter-spacing: -0.02em;
   position: relative;
+  padding-left: 1px;
 }
 
 .rare-modal__label--name {
@@ -3035,6 +3043,7 @@ input::-webkit-inner-spin-button {
 
 .rare-modal__input--invalid {
   border: 2px solid #ff3d3d;
+  height: 60px;
 }
 
 .rare-modal__input--count {
@@ -3053,6 +3062,7 @@ input::-webkit-inner-spin-button {
   line-height: 20px;
   text-align: left;
   position: relative;
+  letter-spacing: 0.1px;
 }
 
 .rare-modal__input-hint--mail {
@@ -3155,8 +3165,8 @@ input::-webkit-inner-spin-button {
   display: block;
   position: absolute;
   padding: 0;
-  top: 84px;
-  right: 80px;
+  top: 73px;
+  right: 70px;
   width: 26px;
   height: 26px;
   border: 0;
